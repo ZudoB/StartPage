@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start Page</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="app">
+
+    <div class="time-date">
+        <p class="time"><strong>{{hours}}</strong>:<span>{{minutes}}</span></p>
+        <p class="date">{{date}}</p>
+    </div>
+
+    <input class="search" placeholder="Search for anything..." ref="search" v-model="search" @keydown="keypress">
+
+    <div class="results" v-if="search.trim().length > 0">
+        <div class="result" v-for="(result, index) in results" @click="handleResult(index)">
+            <div class="number">{{index+1}}</div>
+            <div class="content">
+                <p><span :style="{'background-color': result.colour}" class="tag">{{result.name}}</span></p>
+                <p>{{result.description}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.6/vue.js" integrity="sha256-K0omHu9VgOqkLI+IeSaIy429J2Cpr603vvq/1WY7plo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+<script src="providers.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/background.jpg);
+    background-size: cover;
+
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 14px;
+
+    padding: 2em;
+}
+
+p {
+    margin: 0;
+}
+
+#app {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 2em;
+    padding: 0.25em;
+    width: 100%;
+}
+
+.results {
+    margin-top: 1em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5em;
+    width: 100%;
+}
+
+.result {
+    display: flex;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.result .number {
+    font-size: 2em;
+    padding: 0.25em;
+}
+
+.result .content {
+    padding: 0.5em;
+}
+
+.tag {
+    color: #fff;
+    padding: 0.1em 0.25em;
+    border-radius: 3px;
+}
+
+.time-date {
+    margin-bottom: 1em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+.time {
+    font-size: 4em;
+}
+
+.date {
+    font-size: 2em;
+}
