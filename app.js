@@ -20,6 +20,12 @@ const app = new Vue({
             if (this.results[id]) {
                 window.location.href = this.results[id].url;
             }
+        },
+        "doTime": function () {
+            const time = moment();
+            this.date = time.format("dddd D MMMM YYYY");
+            this.hours = time.format("HH");
+            this.minutes = time.format("mm");
         }
     },
     "computed": {
@@ -39,11 +45,10 @@ const app = new Vue({
             this.$refs.search.focus();
         });
 
+        this.doTime();
+
         setInterval(() => {
-            const time = moment();
-            this.date = time.format("dddd D MMMM YYYY");
-            this.hours = time.format("HH");
-            this.minutes = time.format("mm");
+            this.doTime();
         }, 1000);
     }
 });
