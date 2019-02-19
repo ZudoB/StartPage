@@ -3,6 +3,16 @@ const IG_HANDLE_REGEX = /^@([a-zA-Z0-9_.]+)$/;
 const SUBREDDIT_REGEX = /^\/?r\/([a-zA-Z0-9_]+)$/;
 const GH_REPO_REGEX = /^([a-zA-Z0-9_-]{2,})\/([a-zA-Z0-9_-]{2,})$/;
 
+/*
+ * Define new search providers here.
+ * Each provider represents a different type of search that can be done.
+ * Results will be displayed in the order they are defined in.
+ *
+ * Results will only be displayed if the display() method returns true, where the first parameter is the whole search query.
+ * The description() method returns the description for the result, where the first parameter is the whole search query.
+ * The handler() method returns the URL that we should redirect to, where the first parameter is the whole search query.
+ */
+
 const providers = [
     {
         "name": "GitHub",
